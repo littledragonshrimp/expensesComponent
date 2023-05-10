@@ -54,7 +54,7 @@ picture{
 
     background: $whitish;
     box-shadow: 3px 1px 10px $darkBrown;
-    h1, .totalLabel, .changeFrom{
+    h1, .totalOutput{
         margin: 2rem;
     }
 }
@@ -77,14 +77,39 @@ li{
 .totalOutput{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: 0 1rem 0 1rem;
 }
 
-.changeFrom{
-    
-    text-align: end;
+.outputLeft{
+    .totalLabel{
+        font-size: 1.2rem;
+        color: $lightBrown;
+    }
+
+    .output{
+        margin-top: .2rem;
+        font-weight: 700;
+        font-size: 2rem;
+        color: $darkBrown;
+    }
 }
 
+.outputRight{
+    align-items: end;
+    justify-content: end;
+}
+.changeFrom{
+    margin-top: 2rem;
+    text-align: end;
+    font-size: 1.2rem;
+    p{
+        color: $lightBrown;
+    }
+}
+.change{
+    font-weight: 700;
+}
 //
 .chartContainer {
     display: flex;
@@ -104,6 +129,17 @@ width: 3rem;
 border-radius: .5rem;
 margin-bottom: 1rem;
 }
+
+.rect:hover{
+    scale: 1.1;
+    opacity: .5;
+
+}
+
+.rect:active{
+    background-color: $cyan;
+}
+
 
 .chart{
     display: flex;

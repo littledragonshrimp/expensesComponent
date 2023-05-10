@@ -43,7 +43,7 @@ picture {
   background: hsl(33, 100%, 98%);
   box-shadow: 3px 1px 10px hsl(25, 47%, 15%);
 }
-.botSection h1, .botSection .totalLabel, .botSection .changeFrom {
+.botSection h1, .botSection .totalOutput {
   margin: 2rem;
 }
 
@@ -65,11 +65,37 @@ li {
 .totalOutput {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin: 0 1rem 0 1rem;
 }
 
+.outputLeft .totalLabel {
+  font-size: 1.2rem;
+  color: hsl(28, 10%, 53%);
+}
+.outputLeft .output {
+  margin-top: 0.2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(25, 47%, 15%);
+}
+
+.outputRight {
+  align-items: end;
+  justify-content: end;
+}
+
 .changeFrom {
+  margin-top: 2rem;
   text-align: end;
+  font-size: 1.2rem;
+}
+.changeFrom p {
+  color: hsl(28, 10%, 53%);
+}
+
+.change {
+  font-weight: 700;
 }
 
 .chartContainer {
@@ -88,6 +114,15 @@ li {
   width: 3rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.rect:hover {
+  scale: 1.1;
+  opacity: 0.5;
+}
+
+.rect:active {
+  background-color: hsl(186, 34%, 60%);
 }
 
 .chart {
