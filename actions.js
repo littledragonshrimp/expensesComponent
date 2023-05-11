@@ -1,35 +1,31 @@
-const data = fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        return data;
-    })
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    const chartContainer = document.querySelector('.chartContainer');
+    data.forEach(item => {
+      const dayOfWeek = item.day.toLowerCase();
+      const amount = item.amount;
+      const bar = chartContainer.querySelector(`.${dayOfWeek} .rect`);
+      bar.style.height = `${amount}px`;
+    });
+  })
+  .catch(error => console.error(error));
 
-.catch(error => console.log(error));
 
-// Convert data into array
-let chartContainer = document.querySelector('.chart-container');
+  
+  const today = new Date().getDay();
 
-// // Map through data and populate chart
-// data.then(data => {
-//     data.forEach(item => {
-//         let chart = document.createElement('div');
-//         chart.classList.add('chart');
-//         const height = item.amount / 7;
-//         let value=""
-//         if (item.day == "wed") {
-//             value=`<div class="chart-value active" style="--height:${height}em"></div>`
-//         } else {
-//             value=`<div class="chart-value" style="--height:${height}em"></div>`;
-//         }
-//         chart.innerHTML = `
-//         <div class="chart-wrapper">
-//         ${value}
-//         </div>
-//         <div class="chart-title">${item.day}</div>
-//         `;
-//         chartContainer.appendChild(chart);
-//     }
-//     )
-// }
-// )
+  // Get the chart container element
+  const chartContainer = document.querySelector('.chartContainer');
+  
+  // Get the chart items (days)
+  const chartItems = chartContainer.querySelectorAll('.rect');
+  
+  // Loop through the chart items and highlight the current day
+  chartItems.forEach((item, index) => {
+    if (index === today) {
+      item.classList.add('currentDay');
+    } else {
+      item.classList.remove('currentDay');
+    }
+  });

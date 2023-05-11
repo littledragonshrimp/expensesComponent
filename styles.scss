@@ -114,6 +114,10 @@ li{
 .chartContainer {
     display: flex;
     justify-content: space-evenly;
+    align-items: end;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 0;
     p{
         text-align: center;
         margin-bottom: 1rem;
@@ -124,9 +128,9 @@ li{
 
 .rect{
 background: $coral;
-height: 6rem;
-width: 3rem;
-border-radius: .5rem;
+height: calc(100% + 50px);
+width: 2rem;
+border-radius: .3rem;
 margin-bottom: 1rem;
 }
 
@@ -139,6 +143,10 @@ margin-bottom: 1rem;
 .rect:active{
     background-color: $cyan;
 }
+
+.rect.currentDay {
+    background-color: $cyan;
+  }
 
 
 .chart{
@@ -172,3 +180,11 @@ margin-bottom: 1rem;
     color: var(--clr-small);
     font-size: 0.8em;
 }
+
+@media only screen and (min-width: 1000px) {
+    main{
+        width: 40%;
+        max-width: 550px;
+        margin: auto;
+    }
+  }
