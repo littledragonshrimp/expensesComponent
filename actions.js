@@ -10,9 +10,10 @@ fetch('data.json')
     });
   })
   .catch(error => console.error(error));
-
-
   
+
+
+
   const today = new Date().getDay();
 
   // Get the chart container element
@@ -29,3 +30,4 @@ fetch('data.json')
       item.classList.remove('currentDay');
     }
   });
+

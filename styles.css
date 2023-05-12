@@ -17,13 +17,19 @@ body {
 .topSection {
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
   border-radius: 0.5rem;
   background: hsl(10, 79%, 65%);
   color: hsl(33, 100%, 98%);
 }
 .topSection .top-left, .topSection picture {
   margin: 1rem 2rem 1rem 2rem;
+}
+.topSection .my_bal {
+  margin-bottom: 0.5rem;
+}
+.topSection .h2 {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .top-left {
@@ -45,6 +51,7 @@ picture {
 }
 .botSection h1, .botSection .totalOutput {
   margin: 2rem;
+  font-size: 1.5rem;
 }
 
 ul {
@@ -114,7 +121,7 @@ li {
 
 .rect {
   background: hsl(10, 79%, 65%);
-  height: calc(100% + 50px);
+  height: 190%;
   width: 2rem;
   border-radius: 0.3rem;
   margin-bottom: 1rem;

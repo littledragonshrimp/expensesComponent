@@ -26,17 +26,26 @@ body{
 .topSection{
     display: flex;
     justify-content: space-between;
-    border: 2px solid black;
     border-radius: .5rem;
     background: $coral;
     color:$whitish;
     .top-left, picture{
         margin: 1rem 2rem 1rem 2rem;
     }
+    .my_bal{
+        margin-bottom: .5rem;
+    }
+    .h2{
+        font-size: 3rem;
+        font-weight: 700;
+        
+        
+    }
 }
 .top-left{
     display: flex;
     flex-direction: column;
+    
 }
 
 picture{
@@ -56,6 +65,7 @@ picture{
     box-shadow: 3px 1px 10px $darkBrown;
     h1, .totalOutput{
         margin: 2rem;
+        font-size:1.5rem;
     }
 }
 
@@ -128,7 +138,7 @@ li{
 
 .rect{
 background: $coral;
-height: calc(100% + 50px);
+height: calc(190%);
 width: 2rem;
 border-radius: .3rem;
 margin-bottom: 1rem;
@@ -147,6 +157,7 @@ margin-bottom: 1rem;
 .rect.currentDay {
     background-color: $cyan;
   }
+  
 
 
 .chart{
